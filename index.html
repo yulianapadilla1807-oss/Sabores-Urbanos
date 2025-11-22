@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Perros Calientes y Hamburguesas</title>
+
+    <!-- Archivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>Perros Calientes y Hamburguesas</h1>
+        <p>Sabores irresistibles, ingredientes frescos y la mejor calidad</p>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <button class="activo" onclick="mostrarSeccion(event, 'perros')">🌭 Perros Calientes</button>
+        <button onclick="mostrarSeccion(event, 'hamburguesas')">🍔 Hamburguesas</button>
+    </nav>
+
+    <div class="menu-container">
+
+        <!-- Sección Perros -->
+        <section id="perros" class="menu-section active">
+            <h2>🌭 Perros Calientes</h2>
+
+            <div class="grid-menu">
+
+                <!-- ITEM 1 -->
+                <div class="item">
+                    <img src="https://zenu.com.co/wp-content/uploads/2023/12/receta-perro-caliente-colombiano.jpeg">
+                    <h3>Perro Tradicional</h3>
+
+                    <ul class="ingredientes">
+                        <li>Pan de perro 60g - $3000</li>
+                        <li>Salchicha americana 80g - $2900</li>
+                        <li>Salsa de tomate 20ml - $400</li>
+                        <li>Mostaza 10ml - $400</li>
+                        <li>Papas trituradas 30g - $2000</li>
+                    </ul>
+
+                    <p><strong>Receta:</strong> Cocina la salchicha por 5 min. Ponla en el pan, agrega salsas y papas.</p>
+
+                    <p class="precio">$10.000</p>
+                </div>
+
+                <!-- ITEM 2 -->
+                <div class="item">
+                    <img src="https://imag.bonviveur.com/perrito-caliente.jpg">
+                    <h3>Perro Mexicano</h3>
+
+                    <ul class="ingredientes">
+                        <li>Pan artesanal 70g - $1700</li>
+                        <li>Salchicha picante 90g - $2400</li>
+                        <li>Guacamole 40g - $1600</li>
+                        <li>Jalapeños 15g - $3000</li>
+                        <li>Queso cheddar 25g - $3000</li>
+                    </ul>
+
+                    <p><strong>Receta:</strong> Asa la salchicha, agrega guacamole, jalapeños y queso cheddar fundido.</p>
+
+                    <p class="precio">$14.000</p>
+                </div>
+
+                <!-- ITEM 3 -->
+                <div class="item">
+                    <img src="https://static.vecteezy.com/system/resources/previews/031/696/500/non_2x/a-scrumptious-grilled-hotdog-ai-generated-photo.jpg">
+                    <h3>Perro BBQ</h3>
+
+                    <ul class="ingredientes">
+                        <li>Pan artesanal 70g - $1700</li>
+                        <li>Salchicha americana 80g - $1900</li>
+                        <li>Salsa BBQ 25ml - $2000</li>
+                        <li>Tocineta 30g - $4000</li>
+                        <li>Queso mozzarella 20g - $5000</li>
+                    </ul>
+
+                    <p><strong>Receta:</strong> Asa la salchicha, agrega BBQ, tocineta y mozzarella fundida.</p>
+
+                    <p class="precio">$15.000</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sección Hamburguesas -->
+        <section id="hamburguesas" class="menu-section">
+            <h2>🍔 Hamburguesas</h2>
+
+            <div class="grid-menu">
+
+                <!-- ITEM 1 -->
+                <div class="item">
+                    <img src="https://imag.bonviveur.com/hamburguesa-clasica.jpg">
+                    <h3>Hamburguesa Clásica</h3>
+
+                    <ul class="ingredientes">
+                        <li>Pan brioche - $2300</li>
+                        <li>Carne 150g - $4000</li>
+                        <li>Lechuga - $300</li>
+                        <li>Tomate - $1000</li>
+                        <li>Queso americano - $6000</li>
+                    </ul>
+
+                    <p><strong>Receta:</strong> Plancha la carne, funde el queso, agrega vegetales.</p>
+
+                    <p class="precio">$18.000</p>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Sabores Urbanos - Todos los derechos reservados</p>
+
+        <div class="social-icons">
+            <a href="https://wa.me/573001112233"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        function mostrarSeccion(e, id) {
+            document.querySelectorAll('.menu-section')
+                .forEach(s => s.classList.remove('active'));
+
+            document.querySelectorAll('nav button')
+                .forEach(b => b.classList.remove('activo'));
+
+            document.getElementById(id).classList.add('active');
+            e.target.classList.add('activo');
+        }
+    </script>
+
+</body>
+</html>
